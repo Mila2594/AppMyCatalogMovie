@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MyAPYREST.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyAPYREST"
+    xmlns:views="clr-namespace:MyAPYREST.View"
+    Title="My API"
+    Shell.BackgroundColor="Purple"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.TabBarIsVisible="False">
+
+
+    <ShellContent ContentTemplate="{DataTemplate views:HomePage}" Route="HomePage" />
+    <ShellContent
+        Title="Detail Media Item"
+        ContentTemplate="{DataTemplate views:DetailMediaItem}"
+        Route="DetailMediaItem" />
+
+    <Shell.ToolbarItems>
+        <ToolbarItem
+            Clicked="OnHomeClicked"
+            IconImageSource="home.png"
+            Order="Primary"
+            Priority="0"
+            Text="Inicio" />
+
+        <ToolbarItem
+            Clicked="OnFavoritesClicked"
+            IconImageSource="favorites.png"
+            Order="Primary"
+            Priority="1"
+            Text="Favoritos" />
+    </Shell.ToolbarItems>
+
+
+</Shell>

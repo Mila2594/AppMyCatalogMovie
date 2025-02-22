@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyAPYREST.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Home">
+
+    <Grid
+        Padding="20"
+        RowDefinitions="*,*"
+        RowSpacing="20"
+        VerticalOptions="FillAndExpand">
+        <Button
+            Grid.Row="0"
+            Clicked="goToApiRestPageCliked"
+            FontAttributes="Bold"
+            FontSize="26"
+            HorizontalOptions="FillAndExpand"
+            ImageSource="database.png"
+            Text="API REST"
+            VerticalOptions="FillAndExpand">
+
+            <Button.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.5"
+                    Radius="12"
+                    Offset="6,6" />
+            </Button.Shadow>
+        </Button>
+        <Button
+            Grid.Row="1"
+            Clicked="goToApiGratuitaPageCliked"
+            FontAttributes="Bold"
+            FontSize="26"
+            HorizontalOptions="FillAndExpand"
+            ImageSource="exchange.png"
+            Text="API FREE"
+            VerticalOptions="FillAndExpand">
+            <Button.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.5"
+                    Radius="12"
+                    Offset="6,6" />
+            </Button.Shadow>
+        </Button>
+    </Grid>
+
+</ContentPage>

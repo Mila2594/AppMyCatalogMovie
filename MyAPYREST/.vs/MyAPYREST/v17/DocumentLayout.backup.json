@@ -1,0 +1,180 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\viewmodel\\movieviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:viewmodel\\movieviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\converters\\booltocolorconverter .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:converters\\booltocolorconverter .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\viewmodel\\favoritesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:viewmodel\\favoritesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\viewmodel\\moviedetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:viewmodel\\moviedetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\converters\\booltofavoriteimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:converters\\booltofavoriteimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|c:\\users\\milac\\source\\repos\\mycatalogmovie\\myapyrest\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB10AA2F-39DD-4459-BCDE-AF7A1722CFC0}|MyAPYREST.csproj|solutionrelative:services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MovieViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\ViewModel\\MovieViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MovieViewModel.cs",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\ViewModel\\MovieViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MovieViewModel.cs",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAIwPQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T06:29:26.705Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{db388bf8-d8ab-4d02-9b1c-0ad37b3db1b0}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\View\\HomePage.xaml",
+              "RelativeDocumentMoniker": "View\\HomePage.xaml",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\View\\HomePage.xaml",
+              "RelativeToolTip": "View\\HomePage.xaml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAD4v24AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-05T05:56:13.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BoolToColorConverter .cs",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Converters\\BoolToColorConverter .cs",
+              "RelativeDocumentMoniker": "Converters\\BoolToColorConverter .cs",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Converters\\BoolToColorConverter .cs",
+              "RelativeToolTip": "Converters\\BoolToColorConverter .cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T01:59:19.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovieDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\ViewModel\\MovieDetailViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MovieDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\ViewModel\\MovieDetailViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MovieDetailViewModel.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAqwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T07:46:53.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Services\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "Services\\DatabaseService.cs",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Services\\DatabaseService.cs",
+              "RelativeToolTip": "Services\\DatabaseService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAA+wDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T07:37:53.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-05T07:20:41.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FavoritesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\ViewModel\\FavoritesViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\FavoritesViewModel.cs",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\ViewModel\\FavoritesViewModel.cs",
+              "RelativeToolTip": "ViewModel\\FavoritesViewModel.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T07:46:42.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BoolToFavoriteImageConverter.cs",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Converters\\BoolToFavoriteImageConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\BoolToFavoriteImageConverter.cs",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Converters\\BoolToFavoriteImageConverter.cs",
+              "RelativeToolTip": "Converters\\BoolToFavoriteImageConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T07:18:47.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Services\\MovieService.cs",
+              "RelativeDocumentMoniker": "Services\\MovieService.cs",
+              "ToolTip": "C:\\Users\\milac\\source\\repos\\MyCatalogMovie\\MyAPYREST\\Services\\MovieService.cs",
+              "RelativeToolTip": "Services\\MovieService.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAqwKgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T22:19:07.284Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

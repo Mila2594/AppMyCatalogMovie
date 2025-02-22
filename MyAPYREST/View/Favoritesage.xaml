@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyAPYREST.View.Favoritesage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyAPYREST.ViewModel"
+    Title="Favorites">
+
+
+    <Grid>
+        <!--  Lista de Favoritos  -->
+        <CollectionView
+            x:Name="MoviesCollectionView"
+            Margin="10"
+            ItemsSource="{Binding FavoriteMovies}">
+            <CollectionView.EmptyView>
+                <Label
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    Text="No hay favoritos guardados."
+                    TextColor="#424242"
+                    VerticalTextAlignment="Center" />
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    HorizontalItemSpacing="5"
+                    Orientation="Vertical"
+                    Span="1"
+                    VerticalItemSpacing="5" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Execute">
+                                <SwipeItem
+                                    BackgroundColor="Red"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:FavoritesViewModel}}, Path=DeleteFavoriteCommand}"
+                                    CommandParameter="{Binding}"
+                                    IconImageSource="trash.png"
+                                    Text="Eliminar" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Frame
+                            Margin="4"
+                            Padding="15"
+                            BackgroundColor="#546E7A"
+                            BorderColor="#263238"
+                            CornerRadius="10"
+                            HasShadow="True"
+                            VerticalOptions="FillAndExpand">
+
+                            <Grid ColumnDefinitions="2*,*" ColumnSpacing="10">
+                                <!--  Imagen  -->
+                                <Image
+                                    Grid.RowSpan="3"
+                                    Grid.Column="1"
+                                    Aspect="AspectFill"
+                                    HeightRequest="200"
+                                    Source="{Binding PosterPath}">
+                                    <Image.Shadow>
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="0.5"
+                                            Radius="10"
+                                            Offset="5,5" />
+                                    </Image.Shadow>
+                                </Image>
+
+                                <!--  Información de la película  -->
+                                <Grid
+                                    Grid.Column="0"
+                                    RowDefinitions="Auto,Auto,*,Auto"
+                                    RowSpacing="14">
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.ColumnSpan="2"
+                                        FontAttributes="Bold"
+                                        FontSize="18"
+                                        HorizontalTextAlignment="Start"
+                                        Text="{Binding Title}"
+                                        TextColor="White"
+                                        VerticalTextAlignment="Center" />
+
+                                    <Grid
+                                        Grid.Row="1"
+                                        ColumnDefinitions="*,*"
+                                        RowSpacing="10">
+                                        <Label
+                                            Grid.Column="0"
+                                            FontSize="12"
+                                            HorizontalTextAlignment="Start"
+                                            Text="{Binding ReleaseYear}"
+                                            TextColor="White"
+                                            VerticalTextAlignment="Center" />
+                                        <Label
+                                            Grid.Column="2"
+                                            FontSize="12"
+                                            HorizontalTextAlignment="Center"
+                                            Text="{Binding Rating, StringFormat='Calificación: {0:F1}'}"
+                                            TextColor="White"
+                                            VerticalTextAlignment="Center" />
+                                    </Grid>
+                                    <!--  Campo de Notas  -->
+                                    <Editor
+                                        Grid.Row="2"
+                                        Grid.ColumnSpan="2"
+                                        AutoSize="TextChanges"
+                                        BackgroundColor="White"
+                                        FontSize="12"
+                                        Placeholder="Añade tus notas aquí..."
+                                        PlaceholderColor="#CCCCCC"
+                                        Text="{Binding Notes, Mode=TwoWay}"
+                                        TextColor="Black" />
+                                    <!--  Botón para guardar la nota  -->
+                                    <Button
+                                        Grid.Row="3"
+                                        Grid.Column="1"
+                                        Padding="20,4,20,4"
+                                        BackgroundColor="#800180"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:FavoritesViewModel}}, Path=SaveNotesCommand}"
+                                        CommandParameter="{Binding}"
+                                        CornerRadius="30"
+                                        HeightRequest="30"
+                                        HorizontalOptions="Center"
+                                        Text="Guardar Nota"
+                                        TextColor="White" />
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!--  🔹 Entry oculto para cerrar el teclado después de guardar  -->
+        <Entry x:Name="HiddenEntry" IsVisible="False" />
+    </Grid>
+
+
+</ContentPage>

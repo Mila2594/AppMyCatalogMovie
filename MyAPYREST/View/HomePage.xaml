@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyAPYREST.View.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyAPYREST.ViewModel"
+    xmlns:local1="clr-namespace:MyAPYREST.Converters"
+    Title="Movies and Series"
+    Padding="15"
+    BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local1:BoolToFavoriteImageConverter x:Key="BoolToFavoriteImageConverter" />
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{Binding IsAllActive, Converter={StaticResource BoolToColorConverter}}" />
+                <Setter Property="TextColor" Value="{Binding IsAllActive, Converter={StaticResource BoolToColorConverter}, ConverterParameter='TextColor'}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid
+        HorizontalOptions="FillAndExpand"
+        RowDefinitions="Auto,Auto,*"
+        RowSpacing="7"
+        VerticalOptions="FillAndExpand">
+
+        <Grid
+            Grid.Row="0"
+            ColumnDefinitions="*,Auto"
+            ColumnSpacing="7">
+            <Entry
+                x:Name="SearchEntry"
+                Grid.Column="0"
+                Margin="0,0,10,0"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Buscar película..."
+                PlaceholderColor="#424242"
+                Text="{Binding SearchTerm, Mode=TwoWay}"
+                TextColor="Black" />
+
+            <!--  Botón con lupa para búsqueda  -->
+            <ImageButton
+                Grid.Column="1"
+                Padding="5"
+                BackgroundColor="#800180"
+                Command="{Binding SearchCommand}"
+                CornerRadius="10"
+                HeightRequest="60"
+                HorizontalOptions="EndAndExpand"
+                Source="search.png"
+                WidthRequest="60" />
+        </Grid>
+
+        <Border
+            Grid.Row="1"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            StrokeShape="RoundRectangle 50">
+            <Border.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.5"
+                    Radius="12"
+                    Offset="4,4" />
+            </Border.Shadow>
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal"
+                Spacing="0">
+
+                <Button
+                    x:Name="AllButton"
+                    BackgroundColor="{Binding IsAllActive, Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding AllCommand}"
+                    CornerRadius="0"
+                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource ButtonStyle}"
+                    Text="All"
+                    TextColor="{Binding IsAllActive, Converter={StaticResource BoolToColorConverter}, ConverterParameter=TextColor}"
+                    VerticalOptions="FillAndExpand" />
+                <Button
+                    x:Name="EstrenosButton"
+                    BackgroundColor="{Binding IsEstrenosActive, Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding EstrenosCommand}"
+                    CornerRadius="0"
+                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Estrenos"
+                    TextColor="{Binding IsEstrenosActive, Converter={StaticResource BoolToColorConverter}, ConverterParameter=TextColor}"
+                    VerticalOptions="FillAndExpand" />
+
+                <Button
+                    x:Name="CategoryButton"
+                    BackgroundColor="{Binding IsCategoryActive, Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding CategoryCommand}"
+                    CornerRadius="0"
+                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Category"
+                    TextColor="{Binding IsCategoryActive, Converter={StaticResource BoolToColorConverter}, ConverterParameter=TextColor}"
+                    VerticalOptions="FillAndExpand" />
+            </StackLayout>
+        </Border>
+        <CollectionView
+            x:Name="MoviesCollectionView"
+            Grid.Row="2"
+            ItemsSource="{Binding Movies}">
+            <CollectionView.EmptyView>
+                <Label
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    Text="No hay resultados para la búsqueda"
+                    TextColor="#424242"
+                    VerticalTextAlignment="Center" />
+            </CollectionView.EmptyView>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    HorizontalItemSpacing="5"
+                    Orientation="Vertical"
+                    Span="2"
+                    VerticalItemSpacing="5" />
+
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Margin="4"
+                        Padding="10"
+                        BackgroundColor="#546E7A"
+                        BorderColor="#263238"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        VerticalOptions="FillAndExpand">
+                        <Grid
+                            HorizontalOptions="FillAndExpand"
+                            RowDefinitions="*,*"
+                            RowSpacing="10"
+                            VerticalOptions="Center">
+
+                            <Grid
+                                Grid.Row="0"
+                                ColumnDefinitions="3*,*"
+                                ColumnSpacing="15">
+                                <Label
+                                    Grid.Column="0"
+                                    FontSize="16"
+                                    HorizontalTextAlignment="Start"
+                                    Text="{Binding Title}"
+                                    TextColor="White" />
+                                <ImageButton
+                                    Grid.Column="1"
+                                    Margin="0"
+                                    Padding="0"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:MovieViewModel}}, Path=NavigateToDetailCommand}"
+                                    CommandParameter="{Binding}"
+                                    HeightRequest="10"
+                                    Source="arrow_forward.png">
+                                    <ImageButton.Shadow>
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="0.5"
+                                            Radius="10"
+                                            Offset="5,5" />
+                                    </ImageButton.Shadow>
+                                </ImageButton>
+                            </Grid>
+                            <Grid
+                                Grid.Row="1"
+                                ColumnDefinitions="2*,*"
+                                ColumnSpacing="15">
+                                <Label
+                                    Grid.Column="0"
+                                    FontSize="14"
+                                    HorizontalTextAlignment="Start"
+                                    Text="{Binding Rating, StringFormat='Calificación: {0:F1}'}"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                                <ImageButton
+                                    Grid.Column="1"
+                                    Margin="0"
+                                    Padding="3"
+                                    BackgroundColor="White"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:MovieViewModel}}, Path=FavoriteCommand}"
+                                    CommandParameter="{Binding}"
+                                    CornerRadius="7"
+                                    HeightRequest="8"
+                                    Opacity="0.8"
+                                    Source="{Binding IsFavorite, Converter={StaticResource BoolToFavoriteImageConverter}}"
+                                    WidthRequest="8">
+
+                                    <ImageButton.Shadow>
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="0.5"
+                                            Radius="10"
+                                            Offset="5,5" />
+                                    </ImageButton.Shadow>
+                                </ImageButton>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

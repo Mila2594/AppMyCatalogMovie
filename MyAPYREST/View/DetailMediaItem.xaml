@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyAPYREST.View.DetailMediaItem"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyAPYREST.ViewModel"
+    Title="Detail Movie">
+
+    <Grid
+        Padding="30,10,30,20"
+        RowDefinitions="Auto,*,Auto"
+        RowSpacing="15">
+
+        <VerticalStackLayout Grid.Row="0" Spacing="25">
+            <Label
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="{Binding Title}"
+                TextColor="#212121" />
+
+            <!--  Imagen de la Película  -->
+            <Image
+                Grid.Column="1"
+                HeightRequest="300"
+                Source="{Binding PosterPath}">
+                <Image.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.5"
+                        Radius="10"
+                        Offset="5,5" />
+                </Image.Shadow>
+            </Image>
+
+            <!--  Año, Idioma y Calificación  -->
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                <StackLayout Grid.Column="0" HorizontalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Año" />
+                    <Label FontSize="20" Text="{Binding ReleaseYear}" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" HorizontalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Idioma" />
+                    <Label
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Language}" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" HorizontalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Calificación" />
+                    <Label FontSize="20" Text="{Binding Rating}" />
+                </StackLayout>
+            </Grid>
+        </VerticalStackLayout>
+
+        <!--  🔥 SOLO la reseña tiene ScrollView  -->
+        <StackLayout Grid.Row="1" Spacing="10">
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                Text="Reseña" />
+            <ScrollView HeightRequest="150">
+                <Label
+                    FontSize="16"
+                    HorizontalTextAlignment="Justify"
+                    Text="{Binding Overview}" />
+            </ScrollView>
+        </StackLayout>
+
+        <!--  🔥 Botón de Favoritos fijo en la parte inferior  -->
+        <Button
+            Grid.Row="2"
+            Padding="35,10,35,10"
+            BackgroundColor="#800180"
+            Command="{Binding FavoriteCommand}"
+            CornerRadius="30"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            ImageSource="favorites.png"
+            Text="Favoritos"
+            TextColor="White">
+            <Button.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.5"
+                    Radius="10"
+                    Offset="5,5" />
+            </Button.Shadow>
+        </Button>
+
+    </Grid>
+
+</ContentPage>
